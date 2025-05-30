@@ -1,0 +1,6 @@
+symptoms,disease
+"['fever', 'cough', 'fatigue']",Flu
+"['headache', 'nausea']",Migraine
+"['chest pain', 'shortness of breath']",Heart Disease
+"['blurred vision', 'frequent urination', 'thirst']",Diabetes
+"['rash', 'fever']",Measles

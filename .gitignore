@@ -1,0 +1,21 @@
+# Java & Spring Boot
+target/
+*.log
+*.class
+*.jar
+*.war
+*.iml
+*.project
+*.classpath
+.idea/
+*.db
+.env
+
+# Node modules (if frontend added later)
+node_modules/
+
+# Python model dir (optional)
+__pycache__/
+*.pyc
+*.pkl
+venv/
