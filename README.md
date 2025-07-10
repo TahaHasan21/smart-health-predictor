@@ -1,4 +1,4 @@
-# 🧠 Smart Health Predictor – Spring Boot Microservices + ML
+#  Smart Health Predictor – Spring Boot Microservices + ML
 
 Smart Health Predictor is a full-stack microservices-based healthcare application that allows users to enter symptoms, receive AI-driven disease predictions, and book doctor appointments — all routed through a scalable, secure API gateway.
 
@@ -6,7 +6,7 @@ Smart Health Predictor is a full-stack microservices-based healthcare applicatio
 
 ---
 
-## 🔧 Tech Stack
+##  Tech Stack
 
 - **Backend:** Spring Boot, Spring Cloud Gateway, Eureka Discovery
 - **Machine Learning:** Flask (Python), scikit-learn, RandomForestClassifier
@@ -17,7 +17,7 @@ Smart Health Predictor is a full-stack microservices-based healthcare applicatio
 
 ---
 
-## 🚀 Features
+##  Features
 
 ✅ Microservices architecture  
 ✅ Symptom-based disease prediction using a real ML model  
@@ -30,7 +30,7 @@ Smart Health Predictor is a full-stack microservices-based healthcare applicatio
 
 ---
 
-## 🏗️ Microservices Breakdown
+##  Microservices Breakdown
 
 | Service          | Responsibility                         |
 |------------------|------------------------------------------|
@@ -47,12 +47,12 @@ Smart Health Predictor is a full-stack microservices-based healthcare applicatio
 
 > Ensure you have **Java 17**, **Maven**, **Python 3**, and **PostgreSQL** installed.
 
-### 🐘 1. Set up PostgreSQL
+###  1. Set up PostgreSQL
 
 - Create DBs: `user_db`, `doctor_db`, `appointment_db`
 - Set your DB username/password in each service's `application.properties`
 
-### 🐍 2. Run the ML Predictor (Flask)
+###  2. Run the ML Predictor (Flask)
 
 ```bash
 cd symptom-ml-flask
@@ -64,7 +64,7 @@ python app.py
 
 ---
 
-### ☕ 3. Start Spring Boot Services
+###  3. Start Spring Boot Services
 
 Start the services in this order (all ports are customizable):
 
