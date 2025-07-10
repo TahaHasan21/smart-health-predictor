@@ -2,11 +2,9 @@ package com.example.appointment_service.controller;
 
 import com.example.appointment_service.client.DoctorClient;
 import com.example.appointment_service.client.MLClient;
+import com.example.appointment_service.client.NotificationClient;
 import com.example.appointment_service.client.UserClient;
-import com.example.appointment_service.dto.AppointmentResponseDTO;
-import com.example.appointment_service.dto.DoctorDTO;
-import com.example.appointment_service.dto.SymptomRequestDTO;
-import com.example.appointment_service.dto.UserDTO;
+import com.example.appointment_service.dto.*;
 import com.example.appointment_service.entity.Appointment;
 import com.example.appointment_service.repository.AppointmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,6 +30,8 @@ public class AppointmentController {
     @Autowired
     private MLClient mlClient;
 
+    @Autowired
+    private NotificationClient notificationClient;
 
 
     @PostMapping
@@ -46,6 +46,15 @@ public class AppointmentController {
 
         // Call ML Predictor
         String prediction = mlClient.getPrediction(new SymptomRequestDTO(symptoms));
+
+        notificationClient.sendNotification(
+                new NotificationDTO(
+                        appointment.getUserId(),
+                        "Appointment confirmed with " + doctor.getName() +
+                                " on " + appointment.getAppointmentDate()
+                )
+        );
+
 
         return AppointmentResponseDTO.builder()
                 .id(appointment.getId())
